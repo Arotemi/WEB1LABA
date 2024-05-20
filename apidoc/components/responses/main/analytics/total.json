@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties" : {
+        "categories": {
+            "type": "object",
+            "properties" : {
+                "cashback": {
+                    "type": "integer",
+                    "example":22765429215 
+                },
+                "discount": {
+                    "type": "integer",
+                    "example":22765429215                      
+                }
+            }
+        },
+        "total": {
+            "type":"array",
+            "items":{
+                "type":"integer",
+                "example":1
+            }
+        }
+    }
+}

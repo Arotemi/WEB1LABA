@@ -1,0 +1,12 @@
+{
+	"in": "query",
+	"name": "subType",
+	"explode": true,
+	"schema": {
+		"type": "array",
+		"items": {
+			"type": "string",
+			"enum": ["STANDARD", "PRODUCT", "BONUS_COLLECT", "BONUS_SPEND","TIME_WITHOUT_PURCHASE", "CONSUMER_REGISTRATION","APPLICATION_COMPLETE"]
+		}
+	}
+}

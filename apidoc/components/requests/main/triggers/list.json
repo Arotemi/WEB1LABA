@@ -1,0 +1,77 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "targetGroupIds": {
+            "type": "array",
+            "example": [ 1125125125215215, 1242365236243532 ]
+        },
+        "event": {
+            "type": "object",
+            "properties": {
+                "type" : {
+                    "type": "string",
+                    "enum" : ["ORDER", "CUSTOMER"]
+                },
+                "subType":  {
+                    "type": "string",
+                    "enum" : [ "PRODUCT"]
+                },
+                "minBillAmount" : {
+                    "type": "integer",
+                    "example": 12000
+                },
+                "paymentMethods": {
+                    "type": "array"
+                },
+                "branches": {
+                    "type": "array"
+                },
+                "productGroupIds": {
+                    "type": "array",
+                    "example": [ 1658478184363521]
+                },
+                "productsCount" : {
+                    "type": "integer",
+                    "example" : 4
+                },
+                "productsCountUnit" : {
+                    "type": "string",
+                    "enum" : [ "EQ"]
+                },
+                "isProductsCountAcrossOrders": {
+                    "type" : "boolean"
+                }
+            }
+        },
+        "actions" : {
+            "type": "array",
+            "example": [
+                {
+                    "type": "COUPON",
+                    "unit": "ABSOLUTE",
+                    "amount" : 12,
+                    "couponType" : "STANDARD",
+                    "couponPeriod": 12
+                },
+                {
+                    "type": "BONUS",
+                    "unit": "ABSOLUTE",
+                    "amount" : 12
+                },
+                {
+                    "type": "NOTIFICATION",
+                    "notificationTitle": "title",
+                    "notificationDescription" : "description",
+                    "notificationChannel" : "PUSH_NOTIFICATION"
+                }
+            ]
+        }
+
+    }
+}

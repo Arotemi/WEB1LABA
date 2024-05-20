@@ -1,0 +1,10 @@
+{   
+    "in": "query",
+    "name": "orderBy",
+    "explode": true,
+      "schema": {
+        "type": "string",
+        "enum": ["ASC", "DESC"],
+        "default": "DESC"
+      }
+  }

@@ -1,0 +1,118 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "url": {
+            "type": "string"
+        },
+        "type": {
+            "type": "string",
+            "example": "CASHBACK"
+        },
+        "unit": {
+            "type": "string",
+            "enum": ["PERCENT", "ABSOLUTE"]
+        },
+        "paymentMethod": {
+            "type": "integer",
+            "enum": [1, 2, 3]
+        },
+        "priority": {
+            "type": "integer",
+            "enum": [1, 2, 3, 4, 5]
+        },
+        "amount": {
+            "type": "integer",
+            "example": 120
+        },
+        "minBillAmount": {
+            "type": "integer",
+            "example": 200
+        },
+        "startAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "endAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "schedule": {
+            "type": "object",
+            "properties": {
+                "weekdays": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "example": 1
+                    }
+                },
+                "startTime": {
+                    "$ref": "../../../schemas/types/time.json"
+                },
+                "endTime": {
+                    "$ref": "../../../schemas/types/time.json"
+                }
+            }
+        },
+        "maxAmount": {
+            "type": "integer",
+            "example": 10000
+        },
+        "maxUnit": {
+            "type": "string",
+            "enum": ["PERCENT", "ABSOLUTE"]
+        },
+        "couponPeriod": {
+            "type": "integer",
+            "example": 90
+        },
+        "couponSubType": {
+            "type": "string",
+            "enum": ["STANDARD", "PRODUCT"]
+        },
+        "productGroups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 12321512511241225
+                    }
+                }
+            }
+        },
+        "targetGroupIds": {
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "example": 1
+            }
+        },
+        "couponProductGroupIds": {
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "example": 1
+            }
+        },
+        "branches": {
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "example": 1
+            }
+        },
+        "subType": {
+            "type": "string",
+            "enum": ["STANDARD", "PRODUCT"]
+        },
+        "withProducts": {
+            "type": "boolean",
+            "example": false
+        }
+    }
+}

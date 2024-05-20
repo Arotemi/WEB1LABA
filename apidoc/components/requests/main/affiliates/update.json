@@ -1,0 +1,18 @@
+{
+	"type": "object",
+	"properties": {
+		"name":{
+			"type": "string"
+		},
+		"address":{
+			"type": "string"
+		},
+		"externalId":{
+			"type": "string"
+		},
+        "isArchived":{
+			"type": "boolean",
+			"example": false
+		}
+    }
+}

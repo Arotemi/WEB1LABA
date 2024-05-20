@@ -1,0 +1,10 @@
+{
+    "name": "id",
+    "in": "path",
+    "description": "Id of category",
+    "required": true,
+    "schema": {
+        "type": "string",
+        "format": "integer"
+    }
+}

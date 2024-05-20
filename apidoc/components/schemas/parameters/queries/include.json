@@ -1,0 +1,12 @@
+{
+	"in": "query",
+	"name": "include",
+	"explode": true,
+	"schema": {
+		"type": "array",
+		"items": {
+			"type": "string",
+			"enum": ["actions", "loyalties", "meta", "paymentMethods"]
+		}
+	}
+}

@@ -1,0 +1,7 @@
+{   
+    "in": "query",
+    "name": "amountTo",
+    "schema":{
+      "type": "integer"
+    }
+  }

@@ -1,0 +1,9 @@
+{
+    "name":"id",
+    "in":"path",
+    "description":"Id of entity",
+    "required":true,
+    "schema":{
+        "type": "integer"
+    }
+}

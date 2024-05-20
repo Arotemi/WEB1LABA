@@ -1,0 +1,12 @@
+{
+	"in": "query",
+	"name": "type",
+	"explode": true,
+	"schema": {
+		"type": "array",
+		"items": {
+			"type": "string",
+			"enum": ["CASHBACK", "DISCOUNT", "BONUS", "COUPON"]
+		}
+	}
+}

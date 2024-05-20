@@ -1,0 +1,52 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../../schemas/blocks/user.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "merchant": {
+                    "allOf": [
+                        {
+                            "$ref": "../../../schemas/blocks/merchants/merchant.json"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "tariffs": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "../../../schemas/blocks/tariff.json"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "distributionBalance": {
+                                    "$ref": "../../../schemas/blocks/distributionBalance.json"
+                                }
+                            }
+                        },
+                        {
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "permissions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "example": "ROLES_READ"
+                    }
+                }
+            }
+        }
+    ]
+}

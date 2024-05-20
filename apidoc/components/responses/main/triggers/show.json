@@ -1,0 +1,131 @@
+
+{
+    "type": "object",
+    "properties": {
+        "id":{
+            "type"   :   "string",
+            "format" : "integer",
+            "example": 1633431451410704
+        },
+        "name":{
+            "type": "string"
+        },
+        "url":{
+            "type": "string"
+        },
+        "merchantId": {
+            "type": "integer",
+            "example" : 12321321312321
+        },
+        "isArchived": {
+            "type": "boolean"
+        },
+        "targetGroups": {
+            "type": "array",
+            "items": {
+                "$ref": "../../../schemas/blocks/targetGroup.json"
+            }
+        },
+        "triggerEvent": {
+            "type": "object",
+            "properties": {
+                "id":{
+                    "type"   :   "string",
+                    "format" : "integer",
+                    "example": 1633431451410704
+                },
+                "type" : {
+                    "type": "string",
+                    "enum" : ["ORDER", "CUSTOMER"]
+                },
+                "subType":  {
+                    "type": "string",
+                    "enum" : [ "PRODUCT"]
+                },
+                "minBillAmount" : {
+                    "type": "integer",
+                    "example": 12000
+                },
+                "branches": {
+                    "type": "array"
+                },
+                "productGroupIds": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../../../schemas/blocks/productGroups/dumpProductGroup.json"
+                    }
+                },
+                "paymentMethods": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "../../../schemas/blocks/paymentMethods/dumpPaymentMethod.json"
+                    }
+                },
+                "ordersCount" : {
+                    "type": "integer",
+                    "example" : null
+                },
+                "productsCount" : {
+                    "type": "integer",
+                    "example" : 4
+                },
+                "isProductsCountAcrossOrders": {
+                    "type" : "boolean"
+                },
+                "createdAt":{
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "updateAt":{
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "triggerActions": {
+            "type":  "array",
+            "items" : {
+                "type": "object",
+                "properties": {
+                    "id":{
+                        "type"   :   "string",
+                        "format" : "integer",
+                        "example": 1633431451410704
+                    },
+                    "type" : {
+                        "type": "string",
+                        "enum" : ["COUPON", "BONUS"]
+                    },
+                    "unit" : {
+                        "type": "string",
+                        "enum" : ["ABSOLUTE", "PERCENT"]
+                    },
+                    "amount" : {
+                        "type": "integer",
+                        "example" : 12
+                    },
+                    "couponType" : {
+                        "type": "string",
+                        "enum" : ["STANDARD"]
+                    },
+                    "couponPeriod" : {
+                        "type": "integer",
+                        "example" : 12
+                    },
+                    "productGroups" : {
+                        "type": "array"
+                    },
+                    "createdAt":{
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updateAt":{
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "type": "object",
+    "properties": {
+        "data":{
+            "type": "array",
+            "items":{
+                    "allOf": [
+                        {
+                            "$ref": "../../../schemas/blocks/productGroups/dumpProductGroup.json"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "links": {
+                                    "type": "object",
+                                    "properties": {
+                                        "products": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 123456
+                                                    },
+                                                    "type": {
+                                                        "type": "string",
+                                                        "example": "products"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "excludedProducts": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 123456
+                                                    },
+                                                    "type": {
+                                                        "type": "string",
+                                                        "example": "excludedProducts"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "categories": {
+                                            "type": "array",
+                                            "example": []
+                                        },
+                                        "excludedCategories": {
+                                            "type": "array",
+                                            "example": []
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+            }
+        },
+        "includes" : {
+            "type":"object",
+            "properties": {
+                "products": {
+                    "type":"array",
+                    "items" : {
+                        "$ref" : "../../../schemas/blocks/product.json"
+                    }
+                },
+                "excludedProducts": {
+                    "type":"array",
+                    "items" : {
+                        "$ref" : "../../../schemas/blocks/product.json"
+                    }
+                },
+                "categories": {
+                    "type": "array",
+                    "example": []
+                },
+                "excludedCategories": {
+                    "type": "array",
+                    "example": []
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "in": "query",
+    "name": "isBrand",
+    "explode": true,
+    "schema": {
+        "type": "boolean",
+        "enum": [true, false]
+    }
+}

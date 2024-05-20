@@ -1,0 +1,10 @@
+{
+    "name": "loyaltyId",
+    "in": "query",
+    "explode": true,
+    "description":"Id of loyalty",
+    "schema":{
+        "type": "string",
+        "format": "integer"
+    }
+}

@@ -1,0 +1,12 @@
+
+{
+    "type": "object",
+    "properties": {
+        "data":{
+            "type": "array",
+            "items":{
+                "$ref" : "../../../schemas/blocks/loyalty.json"
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+{
+    "type": "object",
+    "properties": {
+        "data":{
+            "type": "array",
+            "items":{
+                "type":"object",
+                "properties": {
+                    "id": {
+                        "$ref": "../../../schemas/types/id.json"
+                    },
+                    "customerId": {
+                        "$ref": "../../../schemas/types/id.json"
+                    },
+                    "initialAmmount": {
+                        "type": "integer",
+                        "example": 10000
+                    },
+                    "links": {
+                        "type": "object",
+                        "properties": {
+                            "loyalties": {
+                                "type":"array",
+                                "items":{
+                                    "$ref": "../../../schemas/types/link/loyalties.json"
+                                }
+                            },
+                            "actions": {
+                                "type":"array",
+                                "items":{
+                                    "$ref": "../../../schemas/types/link/actions.json"
+                                }
+                            }
+                        }
+                    },
+                    "createdAt":{
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updateAt":{
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            }
+        },
+        "includes" : {
+            "type":"object",
+            "properties": {
+                "loyalties": {
+                    "type":"array",
+                    "items" : {
+                        "$ref": "../../../schemas/blocks/loyalty.json"
+                    }
+                },
+                "actions": {
+                    "type":"array",
+                    "items" : {
+                        "$ref": "../../../schemas/blocks/action.json"
+                    }
+                }
+            }
+        }
+    }
+}

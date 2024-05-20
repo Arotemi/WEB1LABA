@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+		"name":{
+			"type": "string"
+		},
+		"status":{
+			"type": "string",
+			"example": "ACTIVE"
+		},
+		"priority":{
+			"type": "integer",
+			"example": 1
+		},
+		"isArchived":{
+			"type": "boolean",
+			"example": true
+		}
+    }
+}

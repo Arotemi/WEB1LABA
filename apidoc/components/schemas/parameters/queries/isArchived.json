@@ -1,0 +1,9 @@
+{   
+    "in": "query",
+    "name": "isArchived",
+    "explode": true,
+      "schema": {
+        "type": "boolean",
+        "enum": [true, false]
+      }
+  }

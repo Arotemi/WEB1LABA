@@ -1,0 +1,12 @@
+{
+	"in": "query",
+	"name": "status",
+	"explode": true,
+	"schema": {
+		"type": "array",
+		"items": {
+			"type": "string",
+			"enum": ["ACTIVE", "BLOCKED", "PENDING"]
+		}
+	}
+}

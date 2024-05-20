@@ -1,0 +1,23 @@
+
+{
+    "type": "object",
+    "properties": {
+        "data":{
+            "type": "array",
+            "items":{
+                "$ref": "../../../schemas/blocks/user.json"
+            }
+        },
+        "includes" : {
+            "type":"object",
+            "properties": {
+                "roles": {
+                    "type":"array",
+                    "items" : {
+                        "$ref": "../../../schemas/blocks/role.json"
+                    }
+                }
+            }
+        }
+    }
+}

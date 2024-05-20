@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties" : {
+        "categories": {
+            "type":"array",
+            "items": {
+                "type": "object",
+                "properties" : {
+                    "min": {
+                        "type": "string",
+                        "enum": ["null", "MALE", "FEMALE", "OTHER"],
+                        "example":"OTHER" 
+                    },
+                    "max": {
+                        "type": "string",
+                        "enum": ["null", "MALE", "FEMALE", "OTHER"],
+                        "example":"OTHER"                       
+                    }
+                }
+            }
+        },
+        "total": {
+            "type":"array",
+            "items":{
+                "type":"integer",
+                "example":1
+            }
+        }
+    }
+}

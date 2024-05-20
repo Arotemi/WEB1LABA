@@ -1,0 +1,62 @@
+
+{
+    "type": "array",
+    "items":{
+        "type":"object",
+        "properties": {
+            "id": {
+                "$ref": "../../../schemas/types/id.json"
+            },
+            "birthDate": {
+                "type": "string",
+                "format": "date"
+            },
+            "phoneNumber": {
+                "type": "string"
+            },
+            "tier" : {
+                "type": "integer"
+            },
+            "isIdentified" : {
+                "type": "boolean"
+            },
+            "age": {
+                "type": "integer"
+            },
+            "referralProgramCode": {
+                "type": "string"
+            },
+            "civilStatus" : {
+                "type": "string"
+            },
+            "occupation" : {
+                "type": "string"
+            },
+            "gender" : {
+                "type": "string"
+            },
+            "interests": {
+                "type": "string",
+                "enum": [ "RUNNING", "SWIMMING", "SKIING", "HIKING", "NO_INTERESTS", "NO_VALUE" ],
+                "example": [ "RUNNING" ]
+            },
+            "city": {
+                "type": "string"
+            },
+            "hasChildren": {
+                "type": "boolean"
+            },
+            "childrenBirthdates": {
+                "type": "array"
+            },
+            "createdAt":{
+                "type": "string",
+                "format": "date-time"
+            },
+            "updateAt":{
+                "type": "string",
+                "format": "date-time"
+            }
+        }
+    }
+}

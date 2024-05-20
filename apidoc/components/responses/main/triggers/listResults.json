@@ -1,0 +1,85 @@
+{
+    "type": "object",
+    "properties": {
+        "data":{
+            "type": "array",
+            "items":{
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "type": {
+                        "type": "string",
+                        "example": "BONUS"
+                    },
+                    "value": {
+                        "type": "integer",
+                        "example": "12"
+                    },
+                    "valueUnit" : {
+                        "type": "string",
+                        "example": "ABSOLUTE"
+                    },
+                    "links": {
+                        "type": "object",
+                        "properties": {
+                            "customer": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "example": "12321321"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "example": "customers"
+                                    }
+                                }
+                            },
+                            "trigger": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer",
+                                        "example": "12321321"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "example": "triggers"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updateAt": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            }
+        },
+        "includes": {
+            "type" : "object",
+            "properties": {
+                "customers": {
+                    "type":"array",
+                    "items" : {
+                        "$ref": "../../../schemas/blocks/customer.json"
+                    }
+                },
+                "triggers": {
+                    "type":"array",
+                    "items" : {
+                        "$ref": "../../../schemas/blocks/trigger.json"
+                    }
+                }
+            }
+        }
+    }
+}

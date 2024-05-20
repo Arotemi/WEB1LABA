@@ -1,0 +1,25 @@
+{
+	"type": "object",
+	"properties": {
+		"email":{
+			"type": "string",
+			"example": "example@mail.com"
+		},
+		"firstName":{
+			"type": "string",
+			"example": "First Name"
+		},
+		"lastName":{
+			"type": "string",
+			"example": "Last Name"
+		},
+		"links": {
+			"type": "object",
+			"properties": {
+				"roles": {
+					"$ref": "../../../schemas/types/link/roles.json"
+				}
+			}
+		}
+    }
+}

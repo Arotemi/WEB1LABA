@@ -1,0 +1,8 @@
+{
+	"type": "object",
+	"properties": {
+		"userId":{
+			"$ref": "../../../schemas/types/id.json"
+		}
+    }
+}

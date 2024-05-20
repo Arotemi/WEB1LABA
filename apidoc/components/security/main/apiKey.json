@@ -1,0 +1,8 @@
+{
+    "authToken": {
+        "type": "apiKey",
+        "description": "Standard Authorization header. Example: \"{token}\"",
+        "name": "Authorization",
+        "in": "header"
+    }
+}

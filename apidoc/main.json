@@ -1,0 +1,48 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "LABA1 Contactbook API",
+        "description": "LABA1 api doc",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/project1"
+        }
+    ],
+    "components": {
+        "securitySchemes": {
+            "$ref": "./components/security/main/apiKey.json"
+        }
+    },
+    "security": [],
+    "paths": {
+        "/registration": {
+            "post": { 
+                "$ref": "./paths/main/auth/registration.json" 
+            }
+        },
+        "/login": {
+            "post": { 
+                "$ref": "./paths/main/auth/login.json" 
+            }
+        },
+        
+        "/contacts": {
+            "post": { 
+                "$ref": "./paths/main/contacts/create.json" 
+            },
+            "get": { 
+                "$ref": "./paths/main/contacts/list.json" 
+            }
+        },
+        "/contacts/{id}": {
+            "patch": { 
+                "$ref": "./paths/main/contacts/update.json" 
+            },
+            "delete": { 
+                "$ref": "./paths/main/contacts/delete.json" 
+            }
+        }
+    }
+}

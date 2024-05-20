@@ -1,0 +1,8 @@
+{
+    "in": "query",
+    "name": "endAtFrom",
+    "schema":{
+      "type": "string",
+      "format": "date-time"
+    }
+  }

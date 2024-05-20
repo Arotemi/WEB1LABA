@@ -1,0 +1,8 @@
+{
+    "in": "query",
+    "name": "startAtFrom",
+    "schema":{
+      "type": "string",
+      "format": "date-time"
+    }
+}

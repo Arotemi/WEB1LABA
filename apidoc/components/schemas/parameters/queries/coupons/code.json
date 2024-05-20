@@ -1,0 +1,8 @@
+{
+    "name": "code",
+    "in": "query",
+    "schema": {
+        "type": "string",
+        "example": "ABCDEG"
+    }
+}

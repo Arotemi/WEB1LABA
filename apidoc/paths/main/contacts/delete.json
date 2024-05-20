@@ -1,0 +1,29 @@
+{
+    "tags": [
+        "Contacts"
+    ],
+    "summary": "Delete contact",
+    "parameters": [
+        {
+            "$ref": "../../../components/schemas/parameters/params/id.json"
+        }
+    ],
+    "responses": {
+        "200": {
+            "description": "Success",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "422": {
+            "$ref": "../../../components/responses/422.json"
+        },
+        "500": {
+            "$ref": "../../../components/responses/500.json"
+        }
+    }
+}

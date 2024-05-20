@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "integer",
+            "example": 1633431451410704
+        },
+        "externalId": {
+            "$ref": "../../../schemas/types/uuid.json"
+        },
+        "name": {
+            "type": "string"
+        },
+        "logo": {
+            "type": "string"
+        },
+        "settings": {
+            "type": "object",
+            "properties": {
+                "zone": {
+                    "type": "string",
+                    "example": "Africa/Abidjan"
+                },
+                "currency": {
+                    "type": "string",
+                    "example": "KGS"
+                },
+                "maxCashback": {
+                    "type": "object",
+                    "properties": {
+                        "ABSOLUTE": {
+                            "type": "integer",
+                            "enum": [
+                                0,
+                                "null"
+                            ]
+                        },
+                        "PERCENT": {
+                            "type": "integer",
+                            "enum": [
+                                0,
+                                "null"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

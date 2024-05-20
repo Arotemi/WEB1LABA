@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "d406aedc-95a9-434a-a170-55cc5616cf1f",
+		"name": "PhoneBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13969947"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful login\", function () {",
+									"    // Parse response JSON",
+									"    var jsonData = pm.response.json();",
+									"    // Check if response contains any indicator of successful registration",
+									"    pm.expect(jsonData.context).to.haveOwnProperty(\"userId\");",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"zenyatoop@gmail.com\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\",\n    \"password\": \"MishaDs12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful profile\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.context).to.haveOwnProperty(\"userId\");",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"zenyatoop@gmail.com\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\",\n    \"password\": \"MishaDs12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful Registration\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.context).to.haveOwnProperty(\"userId\");",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"zenyatoopp+12323@gmail.com\",\n    \"name\": \"z\",\n    \"lastName\": \"m\",\n    \"password\": \"MishaDs12\",\n    \"birthDate\": \"2022-12-12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contacts",
+			"item": [
+				{
+					"name": "create cont",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response has correct structure\", function () {",
+									"    // Parse response JSON",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"    // Check if response has all expected keys",
+									"    pm.expect(jsonData).to.have.keys('id', 'firstName', 'lastName', 'phone', 'userId', 'updatedAt', 'createdAt');",
+									"});",
+									"",
+									"pm.test(\"Response has correct values\", function () {",
+									"    // Parse response JSON",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"    // Check individual values",
+									"    pm.expect(jsonData.id).to.be.a('number');",
+									"    pm.expect(jsonData.firstName).to.eql(\"z\");",
+									"    pm.expect(jsonData.lastName).to.eql(\"m\");",
+									"    pm.expect(jsonData.phone).to.eql(\"+38069343232\");",
+									"    pm.expect(jsonData.userId).to.eql(1);",
+									"    ",
+									"    // Check updatedAt and createdAt are in correct format",
+									"    pm.expect(jsonData.updatedAt).to.match(/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{3}Z$/);",
+									"    pm.expect(jsonData.createdAt).to.match(/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{3}Z$/);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"+38069343232\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response body is an empty object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql({});",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"+38069343232\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/contacts/1709851008585795",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"contacts",
+								"1709851008585795"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upadte",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response has correct structure\", function () {",
+									"    // Parse response JSON",
+									"    var jsonData = pm.response.json();",
+									"    ",
+									"    // Check if response has all expected keys",
+									"    pm.expect(jsonData).to.have.keys('id', 'firstName', 'lastName', 'phone', 'userId', 'updatedAt', 'createdAt');",
+									"});",
+									"",
+									"pm.test(\"Response has correct values\", function () {",
+									"    // Parse response JSON",
+									"    var jsonData = pm.response.json(); ",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"+380693343233\",\n    \"firstName\": \"zId\",\n    \"lastName\": \"mIs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/contacts/1709759431526049",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"contacts",
+								"1709759431526049"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response body is an array\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.be.an('array').that.is.not.empty;",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"+380693343233\",\n    \"firstName\": \"zId\",\n    \"lastName\": \"mIs\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

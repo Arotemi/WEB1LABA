@@ -1,0 +1,28 @@
+{
+    "description": "Validation error",
+    "content": {
+        "application/json": {
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "example": "VALIDATION"
+                            },
+                            "code": {
+                                "type": "string",
+                                "example": "FORMAT_ERROR"
+                            },
+                            "fields": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

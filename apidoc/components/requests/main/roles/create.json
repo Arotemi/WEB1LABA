@@ -1,0 +1,11 @@
+{
+	"type": "object",
+	"properties": {
+		"name":{
+			"type": "string"
+		},
+		"permissions":{
+			"$ref": "../../../schemas/blocks/permissions.json"
+		}
+    }
+}

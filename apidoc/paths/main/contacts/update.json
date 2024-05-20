@@ -1,0 +1,53 @@
+
+{
+  "tags": [
+      "Contacts"
+  ],
+  "summary": "Update contact",
+  "parameters":[
+    {"$ref":"../../../components/schemas/parameters/params/id.json"}
+  ],
+  "requestBody":{
+      "content":{
+          "application/json": {
+              "schema": {
+                  "type": "object",
+                  "properties": {
+                      "firstName":{
+                          "type": "string",
+                          "example": "Test"
+                      },
+                      "lastName":{
+                          "type": "string",
+                          "example": "LName"
+                      },
+                      "phone":{
+                          "type": "string",
+                          "example": "+38068312321"
+                      }
+                  }
+              }
+          }
+      }
+  },
+  "responses": {
+      "200": {
+          "description": "Success",
+          "content": {
+              "application/json": {
+                  "schema": {
+                      "$ref": "../../../components/schemas/blocks/contact.json"
+                    }
+                  }
+              }
+          },
+      "422": {
+          "$ref": "../../../components/responses/422.json"
+      },
+      "500": {
+          "$ref": "../../../components/responses/500.json"
+      }
+  }
+}
+
+

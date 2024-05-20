@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+		"externalId": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"categoriesIds": {
+			"type": "array",
+			"items": {
+				"type": "integer",
+				"example": 1
+			}
+		},
+		"prices": {
+			"type": "array",
+			"items": {
+					"type": "object",
+					"example": {
+							"type": "BASE",
+							"price": 100
+					}
+			}
+	}
+    }
+}

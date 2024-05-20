@@ -1,0 +1,8 @@
+{
+    "in": "query",
+    "name": "offset",
+    "schema":{
+      "type": "integer",
+      "default": 0
+    }
+}

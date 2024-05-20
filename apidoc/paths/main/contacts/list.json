@@ -1,0 +1,47 @@
+
+{
+  "tags": [
+      "Contacts"
+  ],
+  "summary": "List contacts",
+  "parameters": [
+    {
+        "$ref": "../../../components/schemas/parameters/queries/default/orderBy.json"
+    },
+    {
+        "$ref": "../../../components/schemas/parameters/queries/default/sortedBy.json"
+    },
+    {
+        "$ref": "../../../components/schemas/parameters/queries/default/limit.json"
+    },
+    {
+        "$ref": "../../../components/schemas/parameters/queries/default/offset.json"
+    },
+    {
+        "$ref": "../../../components/schemas/parameters/queries/search.json"
+    }
+  ],
+  "responses": {
+      "200": {
+          "description": "Success",
+          "content": {
+              "application/json": {
+                  "schema": {
+                     "type": "array",
+                     "items": {
+                        "$ref": "../../../components/schemas/blocks/contact.json"
+                     }
+                    }
+                  }
+              }
+          },
+      "422": {
+          "$ref": "../../../components/responses/422.json"
+      },
+      "500": {
+          "$ref": "../../../components/responses/500.json"
+      }
+  }
+}
+
+

@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "status": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "BLOCKED",
+                "ACTIVE"
+            ]
+        }
+    }
+}

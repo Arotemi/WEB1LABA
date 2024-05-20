@@ -1,0 +1,15 @@
+{
+    "in": "query",
+    "name": "type",
+    "explode": true,
+    "schema": {
+        "type": "array",
+        "items": {
+            "type": "string",
+            "enum": [
+                "REUSABLE",
+                "DISPOSABLE"
+            ]
+        }
+    }
+}

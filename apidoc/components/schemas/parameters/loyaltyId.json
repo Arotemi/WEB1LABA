@@ -1,0 +1,10 @@
+{
+    "name": "loyaltyId",
+    "in": "path",
+    "description": "Id of loyalty",
+    "required": true,
+    "schema": {
+        "type": "string",
+        "format": "integer"
+    }
+}

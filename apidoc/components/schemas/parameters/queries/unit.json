@@ -1,0 +1,12 @@
+{   
+  "in": "query",
+  "name": "unit",
+  "explode": true,
+    "schema": {
+      "type": "array",
+      "items": {
+          "type": "string",
+          "enum": ["PERCENT", "ABSOLUTE"]
+      }
+    }
+}

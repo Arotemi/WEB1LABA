@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "$ref": "../types/id.json"
+        },
+        "userId": {
+            "$ref": "../types/id.json"
+        },
+        "firstName":{
+            "type": "string",
+            "example": "First name"
+        },
+        "lastName":{
+            "type": "string",
+            "example": "Last name"
+        },
+        "phone":{
+            "type": "string",
+            "example": "+386532412321"
+        },
+        "createdAt": {
+            "$ref": "../types/datetime.json"
+        },
+        "updatedAt": {
+            "$ref": "../types/datetime.json"
+        }
+    }
+}

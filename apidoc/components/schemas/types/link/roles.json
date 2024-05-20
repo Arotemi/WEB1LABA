@@ -1,0 +1,15 @@
+{
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "$ref": "../id.json"
+            },
+            "type": {
+                "type": "string",
+                "example": "roles"
+            }
+        }
+    }
+}

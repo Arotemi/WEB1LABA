@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "REUSABLE",
+                "DISPOSABLE"
+            ]
+        },
+        "subType": {
+            "required": true,
+            "type": "string",
+            "enum": [
+                "STANDARD",
+                "PRODUCT"
+            ]
+        },
+        "code": {
+            "type": "string",
+            "example": "A2B3C4D5"
+        },
+        "count": {
+            "type": "integer",
+            "example": 5
+        }
+    }
+}

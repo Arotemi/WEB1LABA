@@ -1,0 +1,10 @@
+{
+    "in": "query",
+    "name": "sortBy",
+    "explode": true,
+		"schema": {
+			"type": "string",
+			"enum": ["createdAt", "updatedAt", "name"],
+			"default": "createdAt"
+		}
+}

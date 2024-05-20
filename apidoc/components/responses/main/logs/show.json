@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "$ref": "../../../schemas/types/id.json"
+        },
+        "type": {
+            "type": "string",
+            "example": "USER_CREATE"
+        },
+        "data": {
+            "type": "object",
+            "properties": {
+                "from" : {
+                    "type": "object"
+                },
+                "to" : {
+                    "type": "object"
+                }
+            }
+        },
+        "links": {
+            "type": "object",
+            "properties": {
+                "user": {
+                    "type": "object",
+                    "properties":{
+                        "id": {
+                            "$ref": "../../../schemas/types/id.json"
+                        },
+                        "type": {
+                            "type": "string",
+                            "example": "users"
+                        }
+                    }
+                }
+            }
+        },
+        "createdAt":{
+            "type": "string",
+            "format": "date-time"
+        },
+        "updateAt":{
+            "type": "string",
+            "format": "date-time"
+        },
+        "includes" : {
+            "type":"object",
+            "properties": {
+                "users": {
+                    "type":"array",
+                    "items" : {
+                        "$ref": "../../../schemas/blocks/user.json"
+                    }
+                }
+            }
+        }
+    }
+}

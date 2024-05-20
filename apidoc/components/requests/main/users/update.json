@@ -1,0 +1,25 @@
+{
+	"type": "object",
+	"properties": {
+		"firstName":{
+			"type": "string",
+			"example": "First Name"
+		},
+		"lastName":{
+			"type": "string",
+			"example": "Last Name"
+		},
+        "status": {
+            "type": "string",
+			"example": "ACTIVE"
+        },
+		"links": {
+			"type": "object",
+			"properties": {
+				"roles": {
+					"$ref": "../../../schemas/types/link/roles.json"
+				}
+			}
+		}
+    }
+}

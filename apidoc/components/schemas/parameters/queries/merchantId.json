@@ -1,0 +1,11 @@
+{
+    "name": "merchantId",
+    "in": "query",
+    "explode": true,
+    "schema": {
+      "type": "array",
+      "items": {
+        "$ref": "../../types/uuid.json"
+      }
+    }
+  }

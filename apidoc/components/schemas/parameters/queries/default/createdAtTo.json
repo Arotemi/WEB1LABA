@@ -1,0 +1,8 @@
+{
+    "in": "query",
+    "name": "createdAtTo",
+    "schema":{
+      "type": "string",
+      "format": "date-time"
+    }
+}

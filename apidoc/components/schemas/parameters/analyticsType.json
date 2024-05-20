@@ -1,0 +1,8 @@
+{
+    "in": "query",
+    "name": "analyticsType",
+    "schema":{
+      "type": "string"
+    },
+    "description": "Export analytics"
+}

@@ -1,0 +1,9 @@
+{
+    "in": "query",
+    "name": "sortBy",
+    "schema": {
+        "type": "string",
+        "enum": ["createdAt"],
+        "default": "createdAt"
+    }
+}

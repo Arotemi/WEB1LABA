@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties" : {
+        "categories": {
+            "type":"array",
+            "items": {
+                "type": "object",
+                "properties" : {
+                    "min": {
+                        "type": "string",
+                        "enum": ["null", "EMPLOYEE", "ENTREPRENEUR", "PENSIONER", "STUDENT", "UNEMPLOYED"],
+                        "example":"EMPLOYEE" 
+                    },
+                    "max": {
+                        "type": "string",
+                        "enum": ["null", "EMPLOYEE", "ENTREPRENEUR", "PENSIONER", "STUDENT", "UNEMPLOYED"],
+                        "example":"EMPLOYEE"                      
+                    }
+                }
+            }
+        },
+        "total": {
+            "type":"array",
+            "items":{
+                "type":"integer",
+                "example":1
+            }
+        }
+    }
+}

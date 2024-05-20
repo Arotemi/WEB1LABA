@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "example": "Title"
+        },
+        "description": {
+            "type": "string",
+            "example": "Description"
+        },
+        "status": {
+            "type": "string",
+            "example": "SENT"
+        },
+        "sendAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-09-05T11:13:00.000Z"
+        },
+        "templateId": {
+            "type": "integer",
+            "example": "1242151"
+        }
+    }
+}

@@ -1,0 +1,85 @@
+
+{
+    "type": "object",
+    "properties": {
+        "data":{
+            "type":"object",
+                "properties":{
+                    "id":{
+                        "type": "string",
+                        "example":1633431451410704
+                    },
+                    "name":{
+                        "type": "string"
+                    },
+                    "url":{
+                        "type": "string"
+                    },
+                    "status":{
+                        "type": "string",
+                        "example": "NEW"
+                    },
+                    "type":{
+                        "type": "string",
+                        "example": "CASHBACK"
+                    },
+                    "priority":{
+                        "type":"integer",
+                        "example":1
+                    },
+                    "unit":{
+                        "type":"string",
+                        "enum": ["PERCENT", "ABSOLUTE"]
+                    },
+                    "amount":{
+                        "type":"integer",
+                        "example":200
+                    },
+                    "minBillAmount":{
+                        "type":"integer",
+                        "example":20
+                    },
+                    "startAt":{
+                        "type":"string",
+                        "format":"date-time"
+                    },
+                    "endAt":{
+                        "type":"string",
+                        "format":"date-time"
+                    },
+                    "isArchived":{
+                        "type":"boolean",
+                        "example":true
+                    },
+                    "createdAt":{
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "updateAt":{
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "schedule":{
+                        "type":"object",
+                        "properties":{
+                            "weekdays":{
+                                "type":"array",
+                                "items":{
+                                    "type":"integer",
+                                    "example":1
+                                }
+                            },
+                            "startTime":{
+                                "type":"string",
+                                "format":"date-time"
+                            },
+                            "endTime":{
+                                "type":"string",
+                                "format":"date-time"
+                            }
+                        }
+                    }
+                }}
+
+    }
+}

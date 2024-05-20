@@ -1,0 +1,8 @@
+{
+    "name": "merchantId",
+    "in": "query",
+    "required":true,
+    "schema": {
+        "$ref": "../types/uuid.json"
+      }
+  }

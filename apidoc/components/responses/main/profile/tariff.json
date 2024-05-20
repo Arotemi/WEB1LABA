@@ -1,0 +1,27 @@
+{
+    "allOf": [
+        {
+            "$ref": "../../../schemas/blocks/merchantsToTariffs.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "merchant": {
+                    "$ref": "../../../schemas/blocks/merchants/merchant.json"
+                }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "tariff": { "$ref": "../../../schemas/blocks/tariff.json" }
+            }
+        },
+        {
+            "type": "object",
+            "properties": {
+                "nextTariff": { "$ref": "../../../schemas/blocks/tariff.json" }
+            }
+        }
+    ]
+}

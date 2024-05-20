@@ -1,0 +1,21 @@
+{
+    "extends": "webbylab",
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "plugins": [
+        "ava",
+        "eslint-plugin-align-import"
+    ],
+    "rules": {
+        "align-import/align-import": 1,
+        "more/no-hardcoded-password": 0,
+        "more/no-hardcoded-configuration-data": 0,
+        "camelcase": 0,
+        "func-style": 0,
+        "default-param-last": 0,
+        "no-magic-numbers": 0,
+        "no-unused-expressions": ["error", {"allowTernary": true}]
+    }
+}

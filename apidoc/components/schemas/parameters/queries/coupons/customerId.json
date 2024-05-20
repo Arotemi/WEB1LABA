@@ -1,0 +1,7 @@
+{
+    "name": "customerId",
+    "in": "query",
+    "schema": {
+        "$ref": "../../../types/uuid.json"
+    }
+}

@@ -1,0 +1,4 @@
+{
+    "type": "object",
+    "$ref" : "../../../schemas/blocks/product.json"
+}

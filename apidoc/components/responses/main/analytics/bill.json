@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties" : {
+        "categories": {
+            "type":"array",
+            "items": {
+                "type": "object",
+                "properties" : {
+                    "min": {
+                        "type":"integer",
+                        "example":0
+                    },
+                    "max": {
+                        "type":"integer",
+                        "example":10000                        
+                    }
+                }
+            }
+        },
+        "total": {
+            "type":"array",
+            "items":{
+                "type":"integer",
+                "example":1
+            }
+        }
+    }
+}

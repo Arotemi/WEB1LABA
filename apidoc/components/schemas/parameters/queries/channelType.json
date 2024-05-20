@@ -1,0 +1,12 @@
+{
+	"in": "query",
+	"name": "channelType",
+	"explode": true,
+	"schema": {
+		"type": "array",
+		"items": {
+			"type": "string",
+			"enum": [ "EMAIL", "PUSH_NOTIFICATION"]
+		}
+	}
+}

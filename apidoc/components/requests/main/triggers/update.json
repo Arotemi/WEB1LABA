@@ -1,0 +1,32 @@
+{
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"isArchived": {
+			"type": "boolean"
+		},
+		"targetGroupIds": {
+			"type": "array",
+			"example": [ 1125125125215215, 1242365236243532 ]
+		},
+		"actions" : {
+			"type": "array",
+			"example": [
+				{
+					"type": "COUPON",
+					"unit": "ABSOLUTE",
+					"amount" : 12,
+					"couponType" : "STANDARD",
+					"couponPeriod": 12
+				},
+				{
+					"type": "BONUS",
+					"unit": "ABSOLUTE",
+					"amount" : 12
+				}
+			]
+		}
+	}
+}

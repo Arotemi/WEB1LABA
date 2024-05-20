@@ -1,0 +1,9 @@
+{
+    "name": "externalId",
+    "in": "path",
+    "description": "External id of entity",
+    "required": true,
+    "schema": {
+        "$ref": "../../types/uuid.json"
+    }
+}

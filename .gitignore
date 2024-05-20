@@ -1,0 +1,8 @@
+.vscode
+node_modules
+builds/*
+!builds/.gitkeep
+.env
+coverage/
+.idea
+.DS_Store
