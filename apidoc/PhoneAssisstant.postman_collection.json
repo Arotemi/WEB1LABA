@@ -1,16 +1,16 @@
 {
 	"info": {
-		"_postman_id": "d406aedc-95a9-434a-a170-55cc5616cf1f",
-		"name": "PhoneBook",
+		"_postman_id": "e2adf7e9-d702-4cdd-848e-2063a4668083",
+		"name": "PhoneAssisstant",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "13969947"
+		"_exporter_id": "17606668"
 	},
 	"item": [
 		{
-			"name": "auth",
+			"name": "Authorization",
 			"item": [
 				{
-					"name": "login",
+					"name": "Login",
 					"event": [
 						{
 							"listen": "test",
@@ -56,51 +56,7 @@
 					"response": []
 				},
 				{
-					"name": "profile",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Successful profile\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.context).to.haveOwnProperty(\"userId\");",
-									"    pm.expect(pm.response.code).to.equal(200);",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\": \"zenyatoop@gmail.com\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\",\n    \"password\": \"MishaDs12\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/v1/login",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"v1",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "register",
+					"name": "Registration",
 					"event": [
 						{
 							"listen": "test",
@@ -142,14 +98,107 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "ProfileCheck",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful profile\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.context).to.haveOwnProperty(\"userId\");",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"zenyatoop@gmail.com\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\",\n    \"password\": \"MishaDs12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
-			"name": "contacts",
+			"name": "UsersList",
 			"item": [
 				{
-					"name": "create cont",
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response body is an empty object\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.eql({});",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\": \"+38069343232\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/contacts/1709851008585795",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"contacts",
+								"1709851008585795"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Configuration",
 					"event": [
 						{
 							"listen": "test",
@@ -212,56 +261,7 @@
 					"response": []
 				},
 				{
-					"name": "delete",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test(\"Response body is an empty object\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData).to.eql({});",
-									"});",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"phone\": \"+38069343232\",\n    \"firstName\": \"z\",\n    \"lastName\": \"m\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/v1/contacts/1709851008585795",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"v1",
-								"contacts",
-								"1709851008585795"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "upadte",
+					"name": "Update",
 					"event": [
 						{
 							"listen": "test",
@@ -314,7 +314,7 @@
 					"response": []
 				},
 				{
-					"name": "List",
+					"name": "ContactsList",
 					"event": [
 						{
 							"listen": "test",

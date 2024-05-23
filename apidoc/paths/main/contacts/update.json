@@ -15,15 +15,15 @@
                   "properties": {
                       "firstName":{
                           "type": "string",
-                          "example": "Test"
+                          "example": "Artem"
                       },
                       "lastName":{
                           "type": "string",
-                          "example": "LName"
+                          "example": "Test123"
                       },
                       "phone":{
                           "type": "string",
-                          "example": "+38068312321"
+                          "example": "+380666021312"
                       }
                   }
               }

@@ -28,7 +28,7 @@
             }
         },
         
-        "/contacts": {
+        "/users": {
             "post": { 
                 "$ref": "./paths/main/contacts/create.json" 
             },
@@ -36,12 +36,12 @@
                 "$ref": "./paths/main/contacts/list.json" 
             }
         },
-        "/contacts/{id}": {
+        "/users/{id}": {
             "patch": { 
                 "$ref": "./paths/main/contacts/update.json" 
             },
             "delete": { 
-                "$ref": "./paths/main/contacts/delete.json" 
+                "$ref": "./paths/main/contacts/delete.json"
             }
         }
     }
