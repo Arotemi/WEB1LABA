@@ -1,52 +1,52 @@
 
 {
   "tags": [
-      "Contacts"
+    "Contacts"
   ],
   "summary": "Update contact",
   "parameters":[
     {"$ref":"../../../components/schemas/parameters/params/id.json"}
   ],
   "requestBody":{
-      "content":{
-          "application/json": {
-              "schema": {
-                  "type": "object",
-                  "properties": {
-                      "firstName":{
-                          "type": "string",
-                          "example": "Artem"
-                      },
-                      "lastName":{
-                          "type": "string",
-                          "example": "Test123"
-                      },
-                      "phone":{
-                          "type": "string",
-                          "example": "+380666021312"
-                      }
-                  }
-              }
+    "content":{
+      "application/json": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "firstName":{
+              "type": "string",
+              "example": "Artem"
+            },
+            "lastName":{
+              "type": "string",
+              "example": "Test123"
+            },
+            "phone":{
+              "type": "string",
+              "example": "+380666021312"
+            }
           }
+        }
       }
+    }
   },
   "responses": {
-      "200": {
-          "description": "Success",
-          "content": {
-              "application/json": {
-                  "schema": {
-                      "$ref": "../../../components/schemas/blocks/contact.json"
-                    }
-                  }
-              }
-          },
-      "422": {
-          "$ref": "../../../components/responses/422.json"
-      },
-      "500": {
-          "$ref": "../../../components/responses/500.json"
+    "200": {
+      "description": "Success",
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "../../../components/schemas/blocks/contact.json"
+          }
+        }
       }
+    },
+    "422": {
+      "$ref": "../../../components/responses/422.json"
+    },
+    "500": {
+      "$ref": "../../../components/responses/500.json"
+    }
   }
 }
 

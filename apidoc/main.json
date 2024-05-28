@@ -18,29 +18,29 @@
     "security": [],
     "paths": {
         "/registration": {
-            "post": { 
-                "$ref": "./paths/main/auth/registration.json" 
+            "post": {
+                "$ref": "./paths/main/auth/registration.json"
             }
         },
         "/login": {
-            "post": { 
-                "$ref": "./paths/main/auth/login.json" 
+            "post": {
+                "$ref": "./paths/main/auth/login.json"
             }
         },
-        
+
         "/users": {
-            "post": { 
-                "$ref": "./paths/main/contacts/create.json" 
+            "post": {
+                "$ref": "./paths/main/contacts/create.json"
             },
-            "get": { 
-                "$ref": "./paths/main/contacts/list.json" 
+            "get": {
+                "$ref": "./paths/main/contacts/list.json"
             }
         },
         "/users/{id}": {
-            "patch": { 
-                "$ref": "./paths/main/contacts/update.json" 
+            "patch": {
+                "$ref": "./paths/main/contacts/update.json"
             },
-            "delete": { 
+            "delete": {
                 "$ref": "./paths/main/contacts/delete.json"
             }
         }

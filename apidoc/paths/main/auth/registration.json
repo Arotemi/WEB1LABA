@@ -1,118 +1,116 @@
 
 {
-  "tags": [
-      "Auth"
-  ],
-  "summary": "Registration",
-  "requestBody":{
-      "content":{
-          "application/json": {
-              "schema": {
-                  "type": "object",
-                  "properties": {
-                      "email":{
-                          "type": "string",
-                          "example": "example@mail.com"
-                      },
-                      "password":{
-                          "type": "string",
-                          "example": "password"
-                      },
-                      "name":{
-                          "type": "string",
-                          "example": "Misha"
-                      },
-                      "birthDate":{
-                          "type": "string",
-                          "example": "2001-12-12"
-                      }
-                  }
-              }
-          }
-      }
-  },
-  "responses": {
-      "200": {
-          "description": "Success",
-          "content": {
-              "application/json": {
-                  "schema": {
-                      "type" : "object",
-                      "example": {
-                        "context": {
-                            "userId": 1709761043327468,
-                            "useragent": {
-                                "isYaBrowser": false,
-                                "isAuthoritative": false,
-                                "isMobile": false,
-                                "isMobileNative": false,
-                                "isTablet": false,
-                                "isiPad": false,
-                                "isiPod": false,
-                                "isiPhone": false,
-                                "isiPhoneNative": false,
-                                "isAndroid": false,
-                                "isAndroidNative": false,
-                                "isBlackberry": false,
-                                "isOpera": false,
-                                "isIE": false,
-                                "isEdge": false,
-                                "isIECompatibilityMode": false,
-                                "isSafari": false,
-                                "isFirefox": false,
-                                "isWebkit": false,
-                                "isChrome": false,
-                                "isKonqueror": false,
-                                "isOmniWeb": false,
-                                "isSeaMonkey": false,
-                                "isFlock": false,
-                                "isAmaya": false,
-                                "isPhantomJS": false,
-                                "isEpiphany": false,
-                                "isDesktop": false,
-                                "isWindows": false,
-                                "isLinux": false,
-                                "isLinux64": false,
-                                "isMac": false,
-                                "isChromeOS": false,
-                                "isBada": false,
-                                "isSamsung": false,
-                                "isRaspberry": false,
-                                "isBot": "postman",
-                                "isCurl": false,
-                                "isAndroidTablet": false,
-                                "isWinJs": false,
-                                "isKindleFire": false,
-                                "isSilk": false,
-                                "isCaptive": false,
-                                "isSmartTV": false,
-                                "isUC": false,
-                                "isFacebook": false,
-                                "isAlamoFire": false,
-                                "isElectron": false,
-                                "silkAccelerated": false,
-                                "browser": "PostmanRuntime",
-                                "version": "7.36.3",
-                                "os": "unknown",
-                                "platform": "unknown",
-                                "geoIp": {},
-                                "source": "PostmanRuntime/7.36.3",
-                                "isWechat": false,
-                                "ip": "::1"
+    "tags": [
+        "Auth"
+    ],
+    "summary": "Registration",
+    "requestBody":{
+        "content":{
+            "application/json": {
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "email":{
+                            "type": "string",
+                            "example": "example@mail.com"
+                        },
+                        "password":{
+                            "type": "string",
+                            "example": "password"
+                        },
+                        "name":{
+                            "type": "string",
+                            "example": "Misha"
+                        },
+                        "birthDate":{
+                            "type": "string",
+                            "example": "2001-12-12"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "responses": {
+        "200": {
+            "description": "Success",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "type" : "object",
+                        "example": {
+                            "context": {
+                                "userId": 1709761043327468,
+                                "useragent": {
+                                    "isYaBrowser": false,
+                                    "isAuthoritative": false,
+                                    "isMobile": false,
+                                    "isMobileNative": false,
+                                    "isTablet": false,
+                                    "isiPad": false,
+                                    "isiPod": false,
+                                    "isiPhone": false,
+                                    "isiPhoneNative": false,
+                                    "isAndroid": false,
+                                    "isAndroidNative": false,
+                                    "isBlackberry": false,
+                                    "isOpera": false,
+                                    "isIE": false,
+                                    "isEdge": false,
+                                    "isIECompatibilityMode": false,
+                                    "isSafari": false,
+                                    "isFirefox": false,
+                                    "isWebkit": false,
+                                    "isChrome": false,
+                                    "isKonqueror": false,
+                                    "isOmniWeb": false,
+                                    "isSeaMonkey": false,
+                                    "isFlock": false,
+                                    "isAmaya": false,
+                                    "isPhantomJS": false,
+                                    "isEpiphany": false,
+                                    "isDesktop": false,
+                                    "isWindows": false,
+                                    "isLinux": false,
+                                    "isLinux64": false,
+                                    "isMac": false,
+                                    "isChromeOS": false,
+                                    "isBada": false,
+                                    "isSamsung": false,
+                                    "isRaspberry": false,
+                                    "isBot": "postman",
+                                    "isCurl": false,
+                                    "isAndroidTablet": false,
+                                    "isWinJs": false,
+                                    "isKindleFire": false,
+                                    "isSilk": false,
+                                    "isCaptive": false,
+                                    "isSmartTV": false,
+                                    "isUC": false,
+                                    "isFacebook": false,
+                                    "isAlamoFire": false,
+                                    "isElectron": false,
+                                    "silkAccelerated": false,
+                                    "browser": "PostmanRuntime",
+                                    "version": "7.36.3",
+                                    "os": "unknown",
+                                    "platform": "unknown",
+                                    "geoIp": {},
+                                    "source": "PostmanRuntime/7.36.3",
+                                    "isWechat": false,
+                                    "ip": "::1"
+                                }
                             }
                         }
                     }
-                  }
-              }
-          }
-      },
-      "422": {
-          "$ref": "../../../components/responses/422.json"
-      },
-      "500": {
-          "$ref": "../../../components/responses/500.json"
-      }
-  }
+                }
+            }
+        },
+        "422": {
+            "$ref": "../../../components/responses/422.json"
+        },
+        "500": {
+            "$ref": "../../../components/responses/500.json"
+        }
+    }
 }
-
-

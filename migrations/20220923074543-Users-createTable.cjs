@@ -9,6 +9,7 @@ module.exports = {
             passwordHash : { type: Sequelize.STRING,  allowNull: false, defaultValue: '' },
             salt         : { type: Sequelize.STRING,  allowNull: false, defaultValue: '' },
             birthDate    : { type: Sequelize.DATEONLY, allowNull: false },
+            isAdmin      : { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false },
             createdAt    : { type: Sequelize.DATE, allowNull: false },
             updatedAt    : { type: Sequelize.DATE, allowNull: false }
         }, { charset: 'utf8mb4' });

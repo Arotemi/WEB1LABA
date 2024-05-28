@@ -9,15 +9,15 @@
         },
         "firstName":{
             "type": "string",
-            "example": "Artem"
+            "example": "First name"
         },
         "lastName":{
             "type": "string",
-            "example": "Test123"
+            "example": "Last name"
         },
         "phone":{
             "type": "string",
-            "example": "+380666021312"
+            "example": "+386532412321"
         },
         "createdAt": {
             "$ref": "../types/datetime.json"

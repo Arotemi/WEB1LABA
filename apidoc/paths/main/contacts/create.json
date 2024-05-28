@@ -1,50 +1,49 @@
 
 {
-  "tags": [
-      "Contacts"
-  ],
-  "summary": "Add new contact",
-  "requestBody":{
-      "content":{
-          "application/json": {
-              "schema": {
-                  "type": "object",
-                  "properties": {
-                      "firstName":{
-                          "type": "string",
-                          "example": "Artem"
-                      },
-                      "lastName":{
-                          "type": "string",
-                          "example": "Test"
-                      },
-                      "phone":{
-                          "type": "string",
-                          "example": "+38237i642"
-                      }
-                  }
-              }
-          }
-      }
-  },
-  "responses": {
-      "200": {
-          "description": "Success",
-          "content": {
-              "application/json": {
-                  "schema": {
-                      "$ref": "../../../components/schemas/blocks/contact.json"
+    "tags": [
+        "Contacts"
+    ],
+    "summary": "Add new contact",
+    "requestBody":{
+        "content":{
+            "application/json": {
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "firstName":{
+                            "type": "string",
+                            "example": "Artem"
+                        },
+                        "lastName":{
+                            "type": "string",
+                            "example": "Test"
+                        },
+                        "phone":{
+                            "type": "string",
+                            "example": "+38237i642"
+                        }
                     }
-                  }
-              }
-          },
-      "422": {
-          "$ref": "../../../components/responses/422.json"
-      },
-      "500": {
-          "$ref": "../../../components/responses/500.json"
-      }
-  }
+                }
+            }
+        }
+    },
+    "responses": {
+        "200": {
+            "description": "Success",
+            "content": {
+                "application/json": {
+                    "schema": {
+                        "$ref": "../../../components/schemas/blocks/contact.json"
+                    }
+                }
+            }
+        },
+        "422": {
+            "$ref": "../../../components/responses/422.json"
+        },
+        "500": {
+            "$ref": "../../../components/responses/500.json"
+        }
+    }
 }
-
 
